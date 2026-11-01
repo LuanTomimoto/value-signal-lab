@@ -1,0 +1,14 @@
+# Numerical runtime used for reports/demo; Python 3.13.3.
+# Use pyproject.toml for broader compatibility, including Python 3.11.
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+scikit-learn==1.9.1
+plotly==7.1.0
+joblib==1.6.0
+cloudpickle==3.1.2
+threadpoolctl==3.7.0
+narwhals==2.28.0
+python-dateutil==4.0.0
+tzdata==2026.6
+packaging==26.3

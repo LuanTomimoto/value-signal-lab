@@ -1,0 +1,91 @@
+{
+  "provenance": {
+    "historical": "synthetic",
+    "experiment": "synthetic",
+    "seed": 42,
+    "as_of": "2026-11-01",
+    "simulation_assumptions": {
+      "future_revenue_treatment_multiplier": 1.12,
+      "treatment_cost_multiplier": 1.02
+    }
+  },
+  "historical": {
+    "total_customers": 12000,
+    "mature_customers": 11338,
+    "excluded_immature": 662
+  },
+  "prediction": {
+    "model": {
+      "mae": 56.75657475897542,
+      "rmse": 91.19246336024663,
+      "r2": 0.34420052042054705,
+      "aggregate_bias_pct": 7.652233407074949
+    },
+    "baseline": {
+      "mae": 60.32639334768114,
+      "rmse": 98.75287210390013,
+      "r2": 0.23095342248601458,
+      "aggregate_bias_pct": 2.8973575857805356
+    },
+    "calibration_factor": 1.0421437869053984,
+    "baseline_multiplier": 2.8098356245251126,
+    "top_decile_lift": 2.4373575354409205,
+    "split_sizes": {
+      "train": 4421,
+      "calibration": 1120,
+      "test": 3599
+    },
+    "split_dates": {
+      "train": [
+        "2024-01-01",
+        "2024-12-31"
+      ],
+      "calibration": [
+        "2025-04-01",
+        "2025-06-30"
+      ],
+      "test": [
+        "2025-10-01",
+        "2026-07-31"
+      ]
+    }
+  },
+  "experiment": {
+    "control_roas": 3.440199594765248,
+    "treatment_roas": 3.521758750389981,
+    "relative_lift": 0.023707681306874395,
+    "ci95": [
+      -0.03263228389803264,
+      0.0817855542238379
+    ],
+    "bootstrap_replicates": 2000,
+    "assigned": {
+      "control": 3031,
+      "value_signal": 2969
+    },
+    "mature_counts": {
+      "control": 3031,
+      "value_signal": 2969
+    },
+    "excluded_immature": 0,
+    "srm_pvalue": 0.42346949059036776,
+    "secondary_welch_revenue_pvalue": 0.10218583402031299,
+    "minimum_practical_lift": 0.05,
+    "decision": "Inconclusivo para adoção: o intervalo não sustenta ganho acima do limiar prático."
+  },
+  "planning": {
+    "customers_per_arm": 7965,
+    "minimum_relative_lift": 0.05,
+    "power": 0.8,
+    "alpha": 0.05,
+    "relative_influence_variance": 1.2683968562307824
+  },
+  "environment": {
+    "python": "3.13.3",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "plotly": "7.1.0"
+  }
+}
